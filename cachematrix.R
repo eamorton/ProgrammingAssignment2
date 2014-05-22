@@ -1,6 +1,8 @@
 ## These functions are to create a cache for calculating the inverse 
 ## of a matrix
 ## Programming assignment 2
+## Script is templated on the "makeVector" and "cachemean" functions
+## provided in the rdpeng example
 
 ## The first function creates a list of functions to take a square 
 ## matrix and cache its inverse once calculated
@@ -31,7 +33,7 @@ cacheSolve <- function(x, ...) {
         ## Check if the cache already has an inverse for the matrix
         m <- x$getinverse()
         if(!is.null(m)) {
-                message("getting cached data")
+                message("Checking Cache")
                 return(m)
         }
 	  ## Now calculate the inverse and send it to the cache
